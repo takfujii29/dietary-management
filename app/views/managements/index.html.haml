@@ -1,0 +1,9 @@
+.wrapper
+  .header
+    %h3.header__name
+      = current_user.name
+    %ul.header__lists
+      %li.list
+        = link_to "食べもの追加"
+      %li.list
+        = link_to "アカウント編集", edit_user_path(current_user)

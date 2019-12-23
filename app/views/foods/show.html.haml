@@ -1,0 +1,16 @@
+.contents
+  .food_name
+    = @food.name
+  .food_calorie
+    = @food.calorie
+  .food_carbohydrate
+    = @food.carbohydrate
+  .food_protein
+    = @food.protein
+  .food_fat
+    = @food.fat
+%ul.more_list
+  %li
+    = link_to '編集', edit_food_path(@food.id)
+  %li
+    = link_to '削除', "/foods/#{@food.id}", method: :delete

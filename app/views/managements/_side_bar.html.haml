@@ -3,4 +3,4 @@
   - @foods.each do |food|
     %ul.foods_lists
       %li.food_list
-        = link_to "#{food.name}", "/foods/#{food.id}", method: :post
+        = link_to "#{food.name}", food_path(food.id)

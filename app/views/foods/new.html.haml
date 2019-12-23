@@ -1,6 +1,12 @@
 .food-form
   %h1 食べ物登録
   = form_for @food do |f|
+    -if @food.errors.any?
+      .food-foom__errors
+        %h2= "#{@food.errors.full_messages.count}件のエラーが発生しました。"
+        %ul
+          - @food.errors.full_messages.each do |message|
+            %li= message
     .food-form__field.clearfix
       .food-form__field--left
         = f.label :name, "食べ物名", class: 'food-form__label'

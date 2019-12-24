@@ -1,14 +1,14 @@
 .contents
   .food_name
-    = @food.name
+    = "食べ物名　　： #{@food.name}"
   .food_calorie
-    = @food.calorie
+    = "カロリー　　： #{@food.calorie}"
   .food_carbohydrate
-    = @food.carbohydrate
+    = "糖質　　　　： #{@food.carbohydrate}"
   .food_protein
-    = @food.protein
+    = "タンパク質　： #{@food.protein}"
   .food_fat
-    = @food.fat
+    = "脂質　　　　： #{@food.fat}"
 %ul.more_list
   %li
     = link_to '編集', edit_food_path(@food.id)

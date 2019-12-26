@@ -1,0 +1,12 @@
+.main_contents {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  #calendar {
+    float: left;
+    height: 500px;
+    width: 500px;
+  }
+}

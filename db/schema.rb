@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191223024607) do
+ActiveRecord::Schema.define(version: 20191224120021) do
 
   create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",         null: false
@@ -22,13 +22,21 @@ ActiveRecord::Schema.define(version: 20191223024607) do
     t.datetime "updated_at",   null: false
   end
 
-  create_table "user_foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "user_id"
+  create_table "managements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "content"
+    t.string   "image"
     t.integer  "food_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["food_id"], name: "index_user_foods_on_food_id", using: :btree
-    t.index ["user_id"], name: "index_user_foods_on_user_id", using: :btree
+    t.index ["food_id"], name: "index_managements_on_food_id", using: :btree
+    t.index ["user_id"], name: "index_managements_on_user_id", using: :btree
+  end
+
+  create_table "menus", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -45,6 +53,6 @@ ActiveRecord::Schema.define(version: 20191223024607) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "user_foods", "foods"
-  add_foreign_key "user_foods", "users"
+  add_foreign_key "managements", "foods"
+  add_foreign_key "managements", "users"
 end

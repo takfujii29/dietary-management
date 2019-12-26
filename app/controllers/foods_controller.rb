@@ -1,5 +1,9 @@
 class FoodsController < ApplicationController
 
+  def index
+    @foods = Food.all.order('name ASC')
+  end
+
   def new
     @food = Food.new
   end

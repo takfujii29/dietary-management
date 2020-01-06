@@ -1,4 +1,5 @@
 .main_contents {
+  background-color: cornflowerblue;
   &:after {
     content: "";
     clear: both;
@@ -9,4 +10,16 @@
     height: 500px;
     width: 500px;
   }
+}
+.writings {
+height: 700px;
+}
+.writing {
+  padding: 10px 10px 10px 310px;
+}
+h3 {
+  font-size: 30px;
+}
+span {
+  color: white;
 }

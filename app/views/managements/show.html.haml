@@ -1,9 +1,9 @@
 %p#notice= notice
 
 %p
-  %b Title:
-  = @menu.title
+  %b 表題:
+  = @management.title
 
-= link_to 'Edit', edit_menu_path(@menu)
+= link_to '編集', edit_management_path(@management)
 \|
-= link_to 'Back', menus_path
+= link_to '戻る', managements_path

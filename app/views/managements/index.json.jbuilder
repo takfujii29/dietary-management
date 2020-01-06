@@ -1,5 +1,5 @@
-# json.array! @menus, partial: "menus/menu", as: :menu
-json.array!(@menus) do |menu|
+# json.array! @managements, partial: "managements/management", as: :management
+json.array!(@managements) do |management|
   json.title event.title
-  json.url menu_url(menu, format: :html) 
+  json.url management_url(management, format: :html) 
 end

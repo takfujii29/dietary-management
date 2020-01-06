@@ -8,7 +8,6 @@
     border-radius: 5px;
 
     .account-page__inner--left, .account-page__inner--right {
-      float: left;
       width: 50%;
     }
     &:after {
@@ -86,7 +85,7 @@
     float: left;
     margin-top: 20px;
     color: #fff;
-    background-color: #38aef0;
+    background-color: rgb(121, 61, 21);
   }
 
   .field-label {

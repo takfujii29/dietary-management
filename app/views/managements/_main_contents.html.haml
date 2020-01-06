@@ -1,2 +1,24 @@
 .main_contents
-  #calendar
+  .calendar
+    #calendar
+  .managements_list
+    %h1 管理表
+    %table
+      %thead
+        %tr
+          %th 表題
+          %th
+          %th
+          %th
+
+      %tbody
+        - @managements.each do |management|
+          %tr
+            %td= management.title
+            %td= link_to '詳細', management
+            %td= link_to '編集', edit_management_path(management)
+            %td= link_to '削除', management, method: :delete, data: { confirm: 'Are you sure?' }
+
+    %br
+
+    = link_to '新規登録', new_management_path

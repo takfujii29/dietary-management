@@ -1,5 +1,6 @@
 .main_contents {
   background-color: cornflowerblue;
+  height: 700px;
   &:after {
     content: "";
     clear: both;
@@ -22,4 +23,7 @@ h3 {
 }
 span {
   color: white;
+}
+.managements_list{
+  padding: 10px;
 }

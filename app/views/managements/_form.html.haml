@@ -1,13 +1,13 @@
-= form_for @menu do |f|
-  - if @menu.errors.any?
+= form_for @management do |f|
+  - if @management.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@menu.errors.count, "error")} prohibited this menu from being saved:"
+      %h2= "#{pluralize(@management.errors.count, "error")} prohibited this management from being saved:"
       %ul
-        - @menu.errors.full_messages.each do |message|
+        - @management.errors.full_messages.each do |message|
           %li= message
 
   .field
     = f.label :title
     = f.text_field :title
   .actions
-    = f.submit 'Save'
+    = f.submit '登録'

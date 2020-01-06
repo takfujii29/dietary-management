@@ -1,1 +1,1 @@
-json.partial! "menus/menu", menu: @menu
+json.partial! "managements/management", management: @management

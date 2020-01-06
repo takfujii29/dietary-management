@@ -57,7 +57,7 @@ li {
     display: inline-block;
     padding: 12px 20px;
     color: #fff;
-    background-color: #38aef0;
+    background-color: rgb(121, 61, 21);
     border: 0;
   }
   &__field {
@@ -80,29 +80,3 @@ li {
     }
   }
 }
-
-// .chat-group-user {
-//   padding: 0 15px;
-//   line-height: 50px;
-//   font-size: 14px;
-//   border-bottom: 1px solid #ddd;
-//   &:after {
-//     content: "";
-//     clear: both;
-//     display: block;
-//   }
-//   &__name {
-//     float: left;
-//   }
-//   &__btn {
-//     float: right;
-//     display: inline-block;
-//     cursor: pointer;
-//     &--add {
-//       color: #38aef0;
-//     }
-//     &--remove {
-//       color: #f05050;
-//     }
-//   }
-// }

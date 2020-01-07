@@ -1,10 +1,11 @@
 .contents {
-  height: 400px;
-  width: 500px;
-  margin: 0 auto;
-  padding: 0 50px;
-  text-align: initial;
-  background-color: saddlebrown;
+  width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background-image: url(SAWA_saikyouteisyoku.jpg);
+  background-size:  cover;
+  background-color:rgba(255,255,255,0.5);
+  background-blend-mode:lighten;
 }
 .food-show {
   height: 200px;

@@ -11,23 +11,23 @@
       .food-form__field--left
         = f.label :name, "食べ物名", class: 'food-form__label'
       .food-form__field--right
-        = f.text_field :name, class: 'food_name food-form__input', placeholder: " 食べ物名 を入力してください"
+        = f.text_field :name, step: "0.1", class: 'food_name food-form__input', placeholder: " 食べ物名 を入力してください"
       .food-form__field--left
         = f.label :calorie, "カロリー(kcal)", class: 'food-form__label' 
       .food-form__field--right
-        = f.number_field :calorie, class: 'food_calorie food-form__input', placeholder: " カロリー (数値) を入力してください"
+        = f.number_field :calorie, step: "0.1", class: 'food_calorie food-form__input', placeholder: " カロリー (数値) を入力してください"
       .food-form__field--left
         = f.label :carbohydrate, "糖質(g)", class: 'food-form__label'
       .food-form__field--right
-        = f.number_field :carbohydrate, class: 'food_carbohydrate food-form__input', placeholder: "  糖  質  (数値) を入力してください"
+        = f.number_field :carbohydrate, step: "0.1", class: 'food_carbohydrate food-form__input', placeholder: "  糖  質  (数値) を入力してください"
       .food-form__field--left
         = f.label :protein, "タンパク質(g)", class: 'food-form__label' 
       .food-form__field--right
-        = f.number_field :protein, class: 'food_protein food-form__input', placeholder: "タンパク質 (数値) を入力してください"
+        = f.number_field :protein, step: "0.1", class: 'food_protein food-form__input', placeholder: "タンパク質 (数値) を入力してください"
       .food-form__field--left
         = f.label :fat, "脂質(g)", class: 'food-form__label' 
       .food-form__field--right
-        = f.number_field :fat, class: 'food_fat food-form__input', placeholder: "  脂  質  (数値) を入力してください"
+        = f.number_field :fat, step: "0.1", class: 'food_fat food-form__input', placeholder: "  脂  質  (数値) を入力してください"
       .food-form__field.clearfix
         .food-form__field--left
         .food-form__field--right

@@ -17,8 +17,18 @@
   height: 100px;
 }
 .more_list {
-  border: rgb(48, 75, 230) solid 2px;
-  width: 40px;
+  display: flex;
+  width: 150px;
   text-align: center;
   margin-top: 5px;
+  li {
+    margin: 5px;
+    background-color: rgba(134, 59, 6, 0.836);
+    width: 50px;
+    border-radius: 10px;
+  }
+}
+
+table{
+  text-align: center;
 }

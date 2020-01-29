@@ -1,6 +1,0 @@
-.side_bar
-  %h3 登録一覧
-  - @foods.each do |food|
-    %ul.foods_lists
-      %li.food_list
-        = link_to "#{food.name}", food_path(food.id)

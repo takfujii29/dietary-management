@@ -1,0 +1,8 @@
+.side_bar
+  .side_bar__title
+    %h3 登録一覧
+  .side_bar__lists
+    - @foods.each do |food|
+      %ul.foods-lists
+        %li.food-list
+          = link_to "#{food.name}", food_path(food.id), class: "food-list__name"

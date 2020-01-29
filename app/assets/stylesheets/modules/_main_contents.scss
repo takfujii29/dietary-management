@@ -1,6 +1,8 @@
 .main_contents {
   background-color: rgba(81, 129, 216, 0.8);
-  height: 700px;
+  height: 100vh;
+  width: 80vw;
+  overflow: scroll;
   &:after {
     content: "";
     clear: both;
@@ -13,10 +15,14 @@
   }
 }
 .writings {
-height: 700px;
+height: 100vh;
 }
 .writing {
-  padding: 10px 10px 10px 310px;
+  margin: 5px;
+  padding: 10px;
+  background-color: cadetblue;
+  border-radius: 30px;
+  border: 2px solid black;
 }
 h3 {
   font-size: 30px;

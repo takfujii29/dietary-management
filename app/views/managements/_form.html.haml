@@ -7,7 +7,17 @@
           %li= message
 
   .field
-    = f.label :title
-    = f.text_field :title
+    .field__title
+      = f.label :表題
+      = f.text_field :title
+    .field__day
+      = f.label :日付
+      = f.date_field :day
+    .field__food
+      = f.label :食べ物
+      = form_tag('/foods/search',method: :get) do
+        = text_field_tag :foods , "", class: 'input-box__text', placeholder:"食べ物を検索"
+        = submit_tag 'search', class: 'input-search', name: nil 
+
   .actions
-    = f.submit '登録'
+    = f.submit '登録', class: 'btn'

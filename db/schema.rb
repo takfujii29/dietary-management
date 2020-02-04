@@ -10,15 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
-ActiveRecord::Schema.define(version: 20191224094047) do
-=======
-<<<<<<< Updated upstream
-ActiveRecord::Schema.define(version: 20200106080345) do
-=======
 ActiveRecord::Schema.define(version: 20200203080244) do
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
+ActiveRecord::Schema.define(version: 20200203080244) do
+
 
   create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",            null: false
@@ -46,11 +41,9 @@ ActiveRecord::Schema.define(version: 20200203080244) do
     t.string   "image"
     t.date     "day"
     t.string   "title"
-    t.integer  "food_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["food_id"], name: "index_managements_on_food_id", using: :btree
     t.index ["user_id"], name: "index_managements_on_user_id", using: :btree
   end
 

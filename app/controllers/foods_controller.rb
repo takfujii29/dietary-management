@@ -36,10 +36,6 @@ class FoodsController < ApplicationController
     food.update(food_params)
     redirect_to root_path
   end
-
-  def search
-    @foods = Food.where('name LIKE(?)', "%#{params[:keyword]}%").limit(20)
-  end
   
   private
   def food_params

@@ -4,8 +4,7 @@ class ManagementsController < ApplicationController
   # GET /managements
   # GET /managements.json
   def index
-    @foods = Food.all.order('name ASC')
-    @managements = Management.all
+    @managements = Management.where(user_id: current_user.id)
   end
 
   # GET /managements/1
@@ -70,6 +69,6 @@ class ManagementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def management_params
-      params.require(:management).permit(:title).merge(user_id: current_user.id)
+      params.require(:management).permit(:title, :day, food_ids: []).merge(user_id: current_user.id)
     end
 end

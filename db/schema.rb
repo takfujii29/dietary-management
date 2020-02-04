@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 20191224094047) do
+=======
+ActiveRecord::Schema.define(version: 20200203080244) do
+>>>>>>> Stashed changes
 
   create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",         null: false
@@ -27,11 +31,9 @@ ActiveRecord::Schema.define(version: 20191224094047) do
     t.string   "image"
     t.date     "day"
     t.string   "title"
-    t.integer  "food_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["food_id"], name: "index_managements_on_food_id", using: :btree
     t.index ["user_id"], name: "index_managements_on_user_id", using: :btree
   end
 
@@ -49,6 +51,11 @@ ActiveRecord::Schema.define(version: 20191224094047) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+<<<<<<< Updated upstream
   add_foreign_key "managements", "foods"
+=======
+  add_foreign_key "management_foods", "foods"
+  add_foreign_key "management_foods", "managements"
+>>>>>>> Stashed changes
   add_foreign_key "managements", "users"
 end

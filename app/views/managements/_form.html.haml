@@ -6,18 +6,23 @@
         - @management.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    .field__title
+  .form
+    .form-title
       = f.label :表題
       = f.text_field :title
-    .field__day
+    .form-day
       = f.label :日付
       = f.date_field :day
-    .field__food
-      = f.label :食べ物
-      = form_tag('/foods/search',method: :get) do
-        = text_field_tag :foods , "", class: 'input-box__text', placeholder:"食べ物を検索"
-        = submit_tag 'search', class: 'input-search', name: nil 
+    .form-food
+      %label.form-food__label{for: "食べ物を追加"} 食べ物を追加
+      %input#food-search-field.form-food__input{placeholder: "食べ物の検索", type: "text"}/
+      #food-search-result
 
-  .actions
-    = f.submit '登録', class: 'btn'
+    .form-food__field
+      %label.cform-food__label{for: "食べ物"} 選択した食べ物
+      #foods.js-add-food
+        .form-food.js-choice-member
+          %input{name: "management[food_ids][]", type: "hidden"}
+
+    .actions
+      = f.submit '登録', class: 'btn'

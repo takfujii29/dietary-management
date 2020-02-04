@@ -23,16 +23,15 @@
             %tr
               %td= management.title
               %td= management.day
-              %td
-              %td
-              %td
-              %td
-              %td
-              %td
-              %td
-              %td= link_to '詳細', management, class: 'btn'
-              %td= link_to '編集', edit_management_path(management), class: 'btn'
-              %td= link_to '削除', management, method: :delete, data: { confirm: '削除しますか?' }, class: 'btn'
-
-    -# .calendar
-    -#   #calendar
+              - management.foods.each do |food|
+                %td= food.name
+                %td= food.calorie
+                %td= food.carbohydrate
+                %td= food.protein
+                %td= food.fat
+                %td= food.salt_equivalent
+                %td= food.dietary_fiber
+                %td= link_to '詳細', management, class: 'btn'
+                %td= link_to '編集', edit_management_path(management), class: 'btn'
+                %td= link_to '削除', management, method: :delete, data: { confirm: '削除しますか?' }, class: 'btn'
+ 

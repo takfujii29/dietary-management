@@ -1,29 +1,12 @@
 .main_contents
-  .calendar
-    #calendar
-  .managements_list
-    %h1 管理表
-    %table
-      %thead
-        %tr
-          %th 表題
-          %th
-          %th
-          %th
-
-      %tbody
-        - @managements.each do |management|
+  .management__main-contents
+    .management__main-contents__list
+      %h1 管理表
+      = link_to '新規登録', new_management_path, class: "new_register"
+      %br
+      %table{ border: "1"}
+        %thead
           %tr
-<<<<<<< Updated upstream
-            %td= management.title
-            %td= link_to '詳細', management
-            %td= link_to '編集', edit_management_path(management)
-            %td= link_to '削除', management, method: :delete, data: { confirm: 'Are you sure?' }
-
-    %br
-
-    = link_to '新規登録', new_management_path
-=======
             %th 表題
             %th 日付
             %th 食べたもの
@@ -50,6 +33,6 @@
               %td= link_to '詳細', management, class: 'btn'
               %td= link_to '編集', edit_management_path(management), class: 'btn'
               %td= link_to '削除', management, method: :delete, data: { confirm: '削除しますか?' }, class: 'btn'
+
     -# .calendar
     -#   #calendar
->>>>>>> Stashed changes

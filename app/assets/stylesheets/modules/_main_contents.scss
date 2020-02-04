@@ -1,22 +1,23 @@
 .main_contents {
-  background-color: rgba(81, 129, 216, 0.8);
-  height: 700px;
+  background-color: white;
+  height: 100vh;
+  width: 80vw;
+  overflow: scroll;
   &:after {
     content: "";
     clear: both;
     display: block;
   }
-  #calendar {
-    float: left;
-    height: 500px;
-    width: 500px;
-  }
 }
 .writings {
-height: 700px;
+height: 100vh;
 }
 .writing {
-  padding: 10px 10px 10px 310px;
+  margin: 5px;
+  padding: 10px;
+  background-color: cadetblue;
+  border-radius: 30px;
+  border: 2px solid black;
 }
 h3 {
   font-size: 30px;
@@ -24,6 +25,35 @@ h3 {
 span {
   color: white;
 }
-.managements_list{
-  padding: 10px;
+
+.management {
+  &__main-contents{
+    padding: 10px;
+    &__list {
+      padding-bottom: 20px;
+      h1 {
+        font-size: 30px;
+      }
+      th {
+        text-align: center;
+        font-size: 20px;
+        width: 120px;
+        background-color: aqua;
+      }
+      td {
+        font-size: 20px;
+        width: 120px;
+      }
+      .new_register{
+        border-radius: 5px;
+        display: block;
+        background-color: chocolate;
+        text-align: center;
+        height: 30px;
+        width: 80px;
+        line-height: 30px;
+      }
+    }
+  }
 }
+

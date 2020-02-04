@@ -1,8 +1,10 @@
 .header.clearfix
-  %h3.header__name
-    = current_user.name
-  %ul.header__lists
-    %li.list
-      = link_to "食べもの追加", new_food_path
-    %li.list
-      = link_to "トップに戻る", root_path
+  %h2.header__title
+    = "食事管理アプリ"
+    %h3.header__name
+      = current_user.name
+    %ul.header__lists
+      %li.list
+        = link_to "食べもの追加", new_food_path, class: 'btn'
+      %li.list
+        = link_to "トップに戻る", root_path, class: 'btn'

@@ -1,11 +1,13 @@
 .header.clearfix
-  %h3.header__name
-    = current_user.name
-  %ul.header__lists
-    %li.list
-      = link_to "食べもの追加", new_food_path
-    %li.list
-      = link_to "食事管理", managements_path(current_user)
-    %li.list
-      = link_to "アカウント編集", edit_user_path(current_user)
+  %h2.header__title
+    = "食事管理アプリ"
+    %h3.header__name
+      = "#{current_user.name}" + " さん"
+    %ul.header__lists
+      %li.list
+        = link_to "食べもの追加", new_food_path, class: 'btn'
+      %li.list
+        = link_to "食事管理", managements_path(current_user), class: 'btn'
+      %li.list
+        = link_to "アカウント編集", edit_user_path(current_user), class: 'btn'
 

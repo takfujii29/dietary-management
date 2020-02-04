@@ -5,3 +5,15 @@ a {
   text-decoration: none;
   color:white;
 }
+.contents-wrapper {
+  display: flex;
+}
+
+.btn{
+  border-radius: 5px;
+  display: block;
+  background-color: chocolate;
+  text-align: center;
+  margin: 2px;
+  padding: 3px;
+}

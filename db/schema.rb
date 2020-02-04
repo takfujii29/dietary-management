@@ -10,20 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
-ActiveRecord::Schema.define(version: 20191224094047) do
-=======
 ActiveRecord::Schema.define(version: 20200203080244) do
->>>>>>> Stashed changes
+
+ActiveRecord::Schema.define(version: 20200203080244) do
+
 
   create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",         null: false
+    t.string   "name",            null: false
     t.integer  "calorie"
     t.integer  "carbohydrate"
     t.integer  "protein"
     t.integer  "fat"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "salt_equivalent"
+    t.integer  "dietary_fiber"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "management_foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "management_id"
+    t.integer  "food_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["food_id"], name: "index_management_foods_on_food_id", using: :btree
+    t.index ["management_id"], name: "index_management_foods_on_management_id", using: :btree
   end
 
   create_table "managements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -51,11 +61,8 @@ ActiveRecord::Schema.define(version: 20200203080244) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-<<<<<<< Updated upstream
-  add_foreign_key "managements", "foods"
-=======
   add_foreign_key "management_foods", "foods"
   add_foreign_key "management_foods", "managements"
->>>>>>> Stashed changes
+  add_foreign_key "managements", "foods"
   add_foreign_key "managements", "users"
 end

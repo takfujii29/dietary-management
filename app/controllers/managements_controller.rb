@@ -15,6 +15,12 @@ class ManagementsController < ApplicationController
   # GET /managements/new
   def new
     @management = Management.new
+    return nil if params[:keyword] == ""
+    @foods = Food.where(['name LIKE ?', "%#{params[:keyword]}%"])
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   # GET /managements/1/edit
@@ -24,11 +30,12 @@ class ManagementsController < ApplicationController
   # POST /managements
   # POST /managements.json
   def create
+    # binding.pry
     @management = Management.new(management_params)
 
     respond_to do |format|
       if @management.save
-        format.html { redirect_to @management, notice: 'Management was successfully created.' }
+        format.html { redirect_to @management, notice: '登録しました' }
         format.json { render :show, status: :created, location: @management }
       else
         format.html { render :new }
@@ -42,7 +49,7 @@ class ManagementsController < ApplicationController
   def update
     respond_to do |format|
       if @management.update(management_params)
-        format.html { redirect_to @management, notice: 'Management was successfully updated.' }
+        format.html { redirect_to @management, notice: '更新しました' }
         format.json { render :show, status: :ok, location: @management }
       else
         format.html { render :edit }
@@ -56,7 +63,7 @@ class ManagementsController < ApplicationController
   def destroy
     @management.destroy
     respond_to do |format|
-      format.html { redirect_to managements_url, notice: 'Management was successfully destroyed.' }
+      format.html { redirect_to managements_url, notice: '削除しました' }
       format.json { head :no_content }
     end
   end

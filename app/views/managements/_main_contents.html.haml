@@ -14,6 +14,7 @@
       %tbody
         - @managements.each do |management|
           %tr
+<<<<<<< Updated upstream
             %td= management.title
             %td= link_to '詳細', management
             %td= link_to '編集', edit_management_path(management)
@@ -22,3 +23,33 @@
     %br
 
     = link_to '新規登録', new_management_path
+=======
+            %th 表題
+            %th 日付
+            %th 食べたもの
+            %th カロリー(kcal)
+            %th 糖質(g)
+            %th タンパク質(g)
+            %th 脂質(g)
+            %th 食塩相当量(g)
+            %th 食物繊維(g)
+            %th{colspan: "3"}
+
+        %tbody
+          - @managements.each do |management|
+            %tr
+              %td= management.title
+              %td= management.day
+              %td
+              %td
+              %td
+              %td
+              %td
+              %td
+              %td
+              %td= link_to '詳細', management, class: 'btn'
+              %td= link_to '編集', edit_management_path(management), class: 'btn'
+              %td= link_to '削除', management, method: :delete, data: { confirm: '削除しますか?' }, class: 'btn'
+    -# .calendar
+    -#   #calendar
+>>>>>>> Stashed changes

@@ -3,7 +3,5 @@ Rails.application.routes.draw do
   root "foods#index"
   resources :users, only: [:edit, :update]
   resources :foods
-  resources :managements do
-    get :search, on: :collection
-  end
+  resources :managements
 end

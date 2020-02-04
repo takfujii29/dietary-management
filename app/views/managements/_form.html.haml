@@ -14,7 +14,7 @@
       = f.label :日付
       = f.date_field :day
     .form-food
-      %label.form-food__label{for: "食べ物を追加"} 食べ物を追加
+      %label.form-food__label{for: "食べ物を追加"} 食べ物を検索
       %input#food-search-field.form-food__input{placeholder: "食べ物の検索", type: "text"}/
       #food-search-result
 
@@ -23,6 +23,6 @@
       #foods.js-add-food
         .form-food.js-choice-member
           %input{name: "management[food_ids][]", type: "hidden"}
-
+    %br
     .actions
       = f.submit '登録', class: 'btn'

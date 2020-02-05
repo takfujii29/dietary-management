@@ -1,31 +1,58 @@
-#account-page.account-page
+.account-page
   .account-page__inner.clearfix
-    .account-page__inner--left.account-page__header
-      %h2 新規ユーザー登録
-      = render "devise/shared/links"
-    .account-page__inner--right.user-form
+    .account-page__header
+      %h2 ユーザー新規登録
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = devise_error_messages!
-        .field
-          .field-label
-            = f.label :ユーザー名
-          .field-input
-            = f.text_field :name, autofocus: true
-        .field
-          .field-label
-            = f.label :メールアドレス
-          .field-input
-            = f.email_field :email
-        .field
-          .field-label
-            = f.label :パスワード
-            %i (英数字8文字以上)
-          .field-input
-            = f.password_field :password, autocomplete: "off"
-        .field
-          .field-label
-            = f.label :パスワード（確認用）
-          .field-input
-            = f.password_field :password_confirmation, autocomplete: "off"
-        .actions
-          = f.submit "登録", class: 'btn'
+        .field-wrapper
+          .field-left
+            .field
+              .field-label
+                = f.label :ユーザー名
+              .field-input
+                = f.text_field :name, autofocus: true
+            .field
+              .field-label
+                = f.label :メールアドレス
+              .field-input
+                = f.email_field :email
+            .field
+              .field-label
+                = f.label :パスワード
+                %i (英数字8文字以上)
+              .field-input
+                = f.password_field :password, autocomplete: "off"
+            .field
+              .field-label
+                = f.label :パスワード（確認用）
+              .field-input
+                = f.password_field :password_confirmation, autocomplete: "off"
+          .field-right
+            .field
+              .field-label
+                = f.label :性別
+              .field-input
+                = f.collection_select :gender, Gender.all, :id, :name, prompt: "---", required: "" 
+            .field
+              .field-label
+                = f.label :年齢（歳）
+              .field-input
+                = f.number_field :age, required: "", placeholder: " 年齢 (半角数字) を入力してください"
+            .field
+              .field-label
+                = f.label :身長（cm）
+              .field-input
+                = f.number_field :height, step: "0.1",required: "", placeholder: " 身長 (半角数字) を入力してください"
+            .field
+              .field-label
+                = f.label :体重（kg）
+              .field-input
+                = f.number_field :weight, step: "0.1", required: "" , placeholder: " 体重 (半角数字) を入力してください"
+            .field
+              .field-label
+                = f.label :身体活動レベル
+              .field-input
+                = f.collection_select :activity, Activity.all, :id, :name, prompt: "---", required: ""
+            .actions
+              = f.submit "新規登録", class: 'btn'
+              = render "devise/shared/links"

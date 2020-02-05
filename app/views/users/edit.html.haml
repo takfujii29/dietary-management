@@ -1,8 +1,7 @@
-#account-page.account-page
-  .account-page__inner.clerafix
-    .account-page__inner--left.account-page__header
+.account-page
+  .account-page__edit.clerafix
+    .account-page__header
       %h2 アカウントの編集
-    .account-page__inner--right.user-form
       = form_for(current_user) do |f|
         .field
           .field-label

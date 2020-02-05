@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20200203080244) do
 
-ActiveRecord::Schema.define(version: 20200203080244) do
-
-
   create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",            null: false
     t.integer  "calorie"
@@ -54,6 +51,13 @@ ActiveRecord::Schema.define(version: 20200203080244) do
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer  "gender",                              null: false
+    t.integer  "age",                                 null: false
+    t.integer  "height",                              null: false
+    t.integer  "weight",                              null: false
+    t.integer  "bmi"
+    t.integer  "activity",                            null: false
+    t.integer  "intake_calorie"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -63,6 +67,5 @@ ActiveRecord::Schema.define(version: 20200203080244) do
 
   add_foreign_key "management_foods", "foods"
   add_foreign_key "management_foods", "managements"
-  add_foreign_key "managements", "foods"
   add_foreign_key "managements", "users"
 end

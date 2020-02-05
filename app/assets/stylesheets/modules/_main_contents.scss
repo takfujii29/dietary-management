@@ -42,14 +42,15 @@ span {
       th {
         text-align: center;
         font-size: 20px;
-        width: 130px;
+        min-width: 130px;
         background-color: aqua;
       }
       td {
+        text-align: center;
         font-size: 20px;
-        width: 130px;
+        min-width: 130px;
       }
-      .new_register{
+      .new_register {
         border-radius: 5px;
         display: block;
         background-color: chocolate;
@@ -57,6 +58,16 @@ span {
         height: 30px;
         width: 80px;
         line-height: 30px;
+      }
+      .t-btn{
+        border-radius: 5px;
+        display: block;
+        background-color: chocolate;
+        text-align: center;
+        height: 30px;
+        width: 80px;
+        line-height: 30px;
+        margin: 2px auto;
       }
     }
   }

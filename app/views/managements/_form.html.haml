@@ -1,28 +1,28 @@
-= form_for @management do |f|
-  - if @management.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@management.errors.count, "error")} prohibited this management from being saved:"
-      %ul
-        - @management.errors.full_messages.each do |message|
-          %li= message
-
-  .form
-    .form-title
-      = f.label :表題
-      = f.text_field :title
-    .form-day
-      = f.label :日付
-      = f.date_field :day
-    .form-food
-      %label.form-food__label{for: "食べ物を追加"} 食べ物を検索
-      %input#food-search-field.form-food__input{placeholder: "食べ物の検索", type: "text"}/
-      #food-search-result
+.form-wrapper
+  = form_for @management do |f|
+    - if @management.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@management.errors.count, "error")} prohibited this management from being saved:"
+        %ul
+          - @management.errors.full_messages.each do |message|
+            %li= message
+    .form
+      = f.label :title, "表題", class: "form__label"
+      = f.text_field :title, class: "form__input"
+    .form
+      = f.label :day, "日付", class: "form__label"
+      = f.date_field :day, class: "form__input"
+    .form
+      %label.form__label{for: "食べ物を検索"} 食べ物を検索
+      %input#food-search-field.form__input{placeholder: "食べ物の検索", type: "text"}/
 
     .form-food__field
-      %label.cform-food__label{for: "食べ物"} 選択した食べ物
+      %label.form__label{for: "検索結果"} 検索結果（追加ボタンを押してください）
       #foods.js-add-food
-        .form-food.js-choice-member
+        .form-food.js-choice-food
           %input{name: "management[food_ids][]", type: "hidden"}
+          #food-search-result
     %br
     .actions
       = f.submit '登録', class: 'btn'
+    = link_to '戻る', managements_path, class: 'btn'

@@ -16,5 +16,6 @@
             = f.email_field :email
         .actions
           = f.submit "更新", class: 'btn'
-          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
-          = link_to "トップページに戻る", :back, class: 'btn'
+    .account-btn
+      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      = link_to "トップページに戻る", :back, class: 'btn'

@@ -1,44 +1,58 @@
 .contents {
-  width: 600px;
+  height: 70vh;
+  min-height: 600px;
+  width: 70vw;
+  min-width: 1000px;
   margin: 60px auto;
   padding: 40px;
   background-image: url(SAWA_saikyouteisyoku.jpg);
   background-size:  cover;
-  background-color:rgba(255,255,255,0.5);
+  background-color:rgba(255,255,255,0.4);
   background-blend-mode:lighten;
+  h2 {
+    margin: 30px;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+  }
 }
 .food-show {
-  height: 200px;
+  height: 70%;
+  width: 70%;
+  margin: auto;
   background-color: snow;
   border: black solid 2px;
-  padding: 5px;
+  padding: 40px 5px;
 }
-.blank {
-  height: 100px;
-}
+
 .more_list {
   display: flex;
-  width: 150px;
+  width: 300px;
   text-align: center;
   margin-top: 5px;
-  li {
+  li a{
+    display: block;
     margin: 5px;
+    font-size: 20px;
     background-color: chocolate;
-    width: 50px;
-    border-radius: 10px;
+    width: 100px;
+    line-height: 30px;
+    border-radius: 20px;
   }
 }
 
 table{
-  text-align: center;
-}
-
-.back-btn {
-  display: block;
-  border-radius: 5px;
-  height: 30px;
-  width: 50px;
-  line-height: 30px;
-  text-align: center;
-  background-color: chocolate;
+  th {
+    text-align: center;
+    font-size: 20px;
+    widows: 30%;
+    min-width: 130px;
+    background-color: aqua;
+  }
+  td {
+    text-align: center;
+    font-size: 20px;
+    width: 70%;
+    min-width: 130px;
+  }
 }

@@ -37,13 +37,6 @@
       font-size: 14px;
       font-weight: 200;
     }
-
-    .btn {
-      margin-top: 20px;
-      color: #fff;
-      background-color: chocolate;
-      font-size: 14px;
-    }
   }
 
   .field {
@@ -69,19 +62,8 @@
     }
   }
 
-  .btn {
-    display: inline-block;
-    height: 50px;
-    padding: 0 30px;
-    line-height: 50px;
-    letter-spacing: 1px;
-    text-align: center;
-    border: none;
-    border-radius: 2px;
-  }
 
   input[type='submit'] {
-    float: left;
     margin-top: 20px;
     color: #fff;
     background-color: chocolate;

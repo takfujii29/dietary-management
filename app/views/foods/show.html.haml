@@ -1,33 +1,27 @@
 .contents
-  .blank
+  %h2= "〜" + @food.name + "〜"
   .food-show
     .food-data
       %table{border: "1", width: "100%", style: "border-collapse: collapse"}
         %tbody
           %tr
-            %th 食べ物名
-            %td  
-              = "#{@food.name}"
+            %th カロリー
+            %td= @food.calorie.to_s + ' (kcal)'
           %tr
-            %th.food_calorie
-              カロリー(kcal)
-            %td
-              = "#{@food.calorie}"
+            %th 糖質
+            %td= @food.carbohydrate.to_s + ' (g)'
           %tr
-            %th.food_carbohydrate
-              糖質(g) 
-            %td
-              = "#{@food.carbohydrate}"
+            %th タンパク質
+            %td= @food.protein.to_s + ' (g)'
           %tr
-            %th.food_protein
-              タンパク質(g)
-            %td
-              = "#{@food.protein}"
+            %th 脂質
+            %td= @food.fat.to_s + ' (g)'
           %tr
-            %th.food_fat
-              脂質(g)
-            %td
-              = "#{@food.fat}"
+            %th 食塩相当量
+            %td= @food.salt_equivalent.to_s + ' (g)'
+          %tr
+            %th 食物繊維
+            %td= @food.dietary_fiber.to_s + ' (g)'
     %ul.more_list
       %li
         = link_to '編集', edit_food_path(@food.id)
@@ -35,4 +29,3 @@
         = link_to '削除', "/foods/#{@food.id}", method: :delete
       %li
         = link_to '戻る', root_path
-  .blank

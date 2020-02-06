@@ -1,21 +1,48 @@
-#account-page.account-page
-  .account-page__inner.clerafix
-    .account-page__inner--left.account-page__header
+.account-page
+  .account-page__edit.clerafix
+    .account-page__header
       %h2 アカウントの編集
-    .account-page__inner--right.user-form
       = form_for(current_user) do |f|
-        .field
-          .field-label
-            = f.label :変更後のユーザー名
-          .field-input
-            = f.text_field :name, autofocus: true
-        .field
-          .field-label
-            = f.label :変更後のメールアドレス
-          .field-input
-            = f.email_field :email
+        .field-wrapper
+          .field-left
+            .field
+              .field-label
+                = f.label :ユーザー名
+              .field-input
+                = f.text_field :name, autofocus: true
+            .field
+              .field-label
+                = f.label :メールアドレス
+              .field-input
+                = f.email_field :email
+          .field-right
+            .field
+              .field-label
+                = f.label :性別
+              .field-input
+                = f.collection_select :gender, Gender.all, :id, :name, prompt: "---", required: "" 
+            .field
+              .field-label
+                = f.label :年齢（歳）
+              .field-input
+                = f.number_field :age, required: "", placeholder: " 年齢 (半角数字) を入力してください", min: "0", max: "120"
+            .field
+              .field-label
+                = f.label :身長（cm）
+              .field-input
+                = f.number_field :height, step: "0.1",required: "", placeholder: " 身長 (半角数字) を入力してください", min: "50", max: "250"
+            .field
+              .field-label
+                = f.label :体重（kg）
+              .field-input
+                = f.number_field :weight, step: "0.1", required: "" , placeholder: " 体重 (半角数字) を入力してください", min: "3", max: "500"
+            .field
+              .field-label
+                = f.label :身体活動レベル
+              .field-input
+                = f.collection_select :activity, Activity.all, :id, :name, prompt: "---", required: ""
         .actions
           = f.submit "更新", class: 'btn'
-    .account-btn
-      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
-      = link_to "トップページに戻る", :back, class: 'btn'
+        .account-btn
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+          = link_to "トップページに戻る", :back, class: 'btn'

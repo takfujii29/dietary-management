@@ -1,14 +1,13 @@
 .account-page {
   .account-page__inner {
-    width: 980px;
+    width: 70vw;
+    min-width: 600px;
+    max-width: 1200px;
     margin: 60px auto;
     padding: 60px;
     background-color: #fff;
     border-radius: 5px;
 
-    .account-page__inner--left, .account-page__inner--right {
-      width: 50%;
-    }
     &:after {
       clear: both;
       content: "";
@@ -35,13 +34,13 @@
       letter-spacing: 3px;
       font-size: 40px;
       font-weight: 200;
+      text-align: center;
 
       &:after {
         content: '';
         display: block;
         width: 60px;
         margin-top: 5px;
-        border-bottom: 1px solid #38aef0;
       }
     }
 
@@ -106,6 +105,27 @@
       }
     }
   }
+}
+.field-wrapper {
+  display: flex;
+  .field-left {
+  width: 50%;
+  padding: 40px;
+  }
+  .field-right {
+  width: 50%;
+  padding: 40px;
+  }
+}
+
+#user_gender {
+  height: 30px;
+  width: 70px;
+}
+#user_activity {
+  height: 30px;
+  width: 100%;
+  word-break: normal;
 }
 
 #error_explanation {

@@ -39,6 +39,6 @@ class FoodsController < ApplicationController
   
   private
   def food_params
-    params.require(:food).permit(:id, :name, :calorie, :carbohydrate, :protein, :fat)#.merge(user_id: current_user.id)
+    params.require(:food).permit(:id, :name, :calorie, :carbohydrate, :protein, :fat, :salt_equivalent, :dietary_fiber)#.merge(user_id: current_user.id)
   end
 end

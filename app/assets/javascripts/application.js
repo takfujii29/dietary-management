@@ -32,23 +32,3 @@ $(function () {
   });
   
 });
-
-// dayClick: function(date, allDay, jsEvent, view) {
-//   var title = prompt('予定を入力してください:');
-  
-//   $('#calendar').fullCalendar('addEventSource', [{
-//   id:date,
-//   title: title,
-//   }]);
-// };
-
-
-// eventClick: function(event) {
-//   var title = prompt('予定を更新してください:');
-//   if(title &amp;&amp; title!=""){
-//     event.title = title;
-//     $('#calendar').fullCalendar('updateEvent', event);
-//   }else{
-//     $('#calendar').fullCalendar("removeEvents", event.id);
-//     }
-// };

@@ -89,7 +89,7 @@
         .management__main-contents__top-data
           = (current_user.height.to_f * current_user.height.to_f / 10000 *22).round(1).to_s + " kg"
     .management__main-contents__list
-      %h1 管理表
+      %h1 記録表
       = link_to '新規登録', new_management_path, class: "new_register"
       %br
       %table{ border: "1"}

@@ -1,5 +1,93 @@
 .main_contents
   .management__main-contents
+    .management__main-contents__tops
+      .management__main-contents__top
+        .management__main-contents__top-title
+          %h1 一日の目安 エネルギー量
+        .management__main-contents__top-data
+          - if current_user.activity == 1 && current_user.gender == 1
+            = (14.1 * current_user.weight + 620 * 1.5).round.to_s + " kcal"
+          - elsif current_user.activity == 1 && current_user.gender == 2
+            = (10.8 * current_user.weight + 620 * 1.5).round.to_s + " kcal"
+          - elsif current_user.activity == 2 && current_user.gender == 1
+            = (14.1 * current_user.weight + 620 * 1.75).round.to_s + " kcal"
+          - elsif current_user.activity == 2 && current_user.gender == 2
+            = (10.8 * current_user.weight + 620 * 1.75).round.to_s + " kcal"
+          - elsif current_user.activity == 3 && current_user.gender == 1
+            = (14.1 * current_user.weight + 620 * 2.0).round.to_s + " kcal"
+          - elsif current_user.activity == 3 && current_user.gender == 2
+            = (10.8 * current_user.weight + 620 * 2.0).round.to_s + " kcal"
+          - else
+            計算できません
+      .management__main-contents__top
+        .management__main-contents__top-title
+          %h1 一日の目安 糖質
+        .management__main-contents__top-data
+          - if current_user.activity == 1 && current_user.gender == 1
+            = ((14.1 * current_user.weight + 620 * 1.5) / 4 * 0.5).round.to_s + " g" + " 〜 " + ((14.1 * current_user.weight + 620 * 1.5) / 4 * 0.65).round.to_s + " g"
+          - elsif current_user.activity == 1 && current_user.gender == 2
+            = ((10.8 * current_user.weight + 620 * 1.5) / 4 * 0.5).round.to_s + " g" + " 〜 " + ((10.8 * current_user.weight + 620 * 1.5) / 4 * 0.65).round.to_s + " g"
+          - elsif current_user.activity == 2 && current_user.gender == 1
+            = ((14.1 * current_user.weight + 620 * 1.75) / 4 * 0.5).round.to_s + " g" + " 〜 " + ((14.1 * current_user.weight + 620 * 1.75) / 4 * 0.65).round.to_s + " g"
+          - elsif current_user.activity == 2 && current_user.gender == 2
+            = ((10.8 * current_user.weight + 620 * 1.75) / 4 * 0.5).round.to_s + " g" + " 〜 " + ((10.8 * current_user.weight + 620 * 1.75) / 4 * 0.65).round.to_s + " g"
+          - elsif current_user.activity == 3 && current_user.gender == 1
+            = ((14.1 * current_user.weight + 620 * 2.0) / 4 * 0.5).round.to_s + " g" + " 〜 " + ((14.1 * current_user.weight + 620 * 2.0) / 4 * 0.65).round.to_s + " g"
+          - elsif current_user.activity == 3 && current_user.gender == 2
+            = ((10.8 * current_user.weight + 620 * 2.0) / 4 * 0.5).round.to_s + " g" + " 〜 " + ((10.8 * current_user.weight + 620 * 2.0) / 4 * 0.65).round.to_s + " g"
+          - else
+            計算できません
+      .management__main-contents__top
+        .management__main-contents__top-title
+          %h1 一日の目安 タンパク質
+        .management__main-contents__top-data
+          - if current_user.activity == 1 && current_user.gender == 1
+            = ((14.1 * current_user.weight + 620 * 1.5) / 4 * 0.13).round.to_s + " g" + " 〜 " + ((14.1 * current_user.weight + 620 * 1.5) / 4 * 0.2).round.to_s + " g"
+          - elsif current_user.activity == 1 && current_user.gender == 2
+            = ((10.8 * current_user.weight + 620 * 1.5) / 4 * 0.13).round.to_s + " g" + " 〜 " + ((10.8 * current_user.weight + 620 * 1.5) / 4 * 0.2).round.to_s + " g"
+          - elsif current_user.activity == 2 && current_user.gender == 1
+            = ((14.1 * current_user.weight + 620 * 1.75) / 4 * 0.13).round.to_s + " g" + " 〜 " + ((14.1 * current_user.weight + 620 * 1.75) / 4 * 0.2).round.to_s + " g"
+          - elsif current_user.activity == 2 && current_user.gender == 2
+            = ((10.8 * current_user.weight + 620 * 1.75) / 4 * 0.13).round.to_s + " g" + " 〜 " + ((10.8 * current_user.weight + 620 * 1.75) / 4 * 0.2).round.to_s + " g"
+          - elsif current_user.activity == 3 && current_user.gender == 1
+            = ((14.1 * current_user.weight + 620 * 2.0) / 4 * 0.13).round.to_s + " g" + " 〜 " + ((14.1 * current_user.weight + 620 * 2.0) / 4 * 0.2).round.to_s + " g"
+          - elsif current_user.activity == 3 && current_user.gender == 2
+            = ((10.8 * current_user.weight + 620 * 2.0) / 4 * 0.13).round.to_s + " g" + " 〜 " + ((10.8 * current_user.weight + 620 * 2.0) / 4 * 0.2).round.to_s + " g"
+          - else
+            計算できません
+      .management__main-contents__top
+        .management__main-contents__top-title
+          %h1 一日の目安 脂質
+        .management__main-contents__top-data
+          - if current_user.activity == 1 && current_user.gender == 1
+            = ((14.1 * current_user.weight + 620 * 1.5) / 9 * 0.2).round.to_s + " g" + " 〜 " + ((14.1 * current_user.weight + 620 * 1.5) / 9 * 0.3).round.to_s + " g"
+          - elsif current_user.activity == 1 && current_user.gender == 2
+            = ((10.8 * current_user.weight + 620 * 1.5) / 9 * 0.2).round.to_s + " g" + " 〜 " + ((10.8 * current_user.weight + 620 * 1.5) / 9 * 0.3).round.to_s + " g"
+          - elsif current_user.activity == 2 && current_user.gender == 1
+            = ((14.1 * current_user.weight + 620 * 1.75) / 9 * 0.2).round.to_s + " g" + " 〜 " + ((14.1 * current_user.weight + 620 * 1.75) / 9 * 0.3).round.to_s + " g"
+          - elsif current_user.activity == 2 && current_user.gender == 2
+            = ((10.8 * current_user.weight + 620 * 1.75) / 9 * 0.2).round.to_s + " g" + " 〜 " + ((10.8 * current_user.weight + 620 * 1.75) / 9 * 0.3).round.to_s + " g"
+          - elsif current_user.activity == 3 && current_user.gender == 1
+            = ((14.1 * current_user.weight + 620 * 2.0) / 9 * 0.2).round.to_s + " g" + " 〜 " + ((14.1 * current_user.weight + 620 * 2.0) / 9 * 0.3).round.to_s + " g"
+          - elsif current_user.activity == 3 && current_user.gender == 2
+            = ((10.8 * current_user.weight + 620 * 2.0) / 9 * 0.2).round.to_s + " g" + " 〜 " + ((10.8 * current_user.weight + 620 * 2.0) / 9 * 0.3).round.to_s + " g"
+          - else
+            計算できません
+      .management__main-contents__top
+        .management__main-contents__top-title
+          %h1 一日の目安 食物繊維
+        .management__main-contents__top-data
+          %p 20 g 以上
+      .management__main-contents__top
+        .management__main-contents__top-title
+          %h1 一日の目安 食塩相当量
+        .management__main-contents__top-data
+          %p 8 g 未満
+      .management__main-contents__top
+        .management__main-contents__top-title
+          %h1 適正体重
+        .management__main-contents__top-data
+          = (current_user.height.to_f * current_user.height.to_f / 10000 *22).round(1).to_s + " kg"
     .management__main-contents__list
       %h1 管理表
       = link_to '新規登録', new_management_path, class: "new_register"

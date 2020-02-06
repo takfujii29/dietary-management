@@ -3,8 +3,12 @@
     = "食事管理アプリ"
     %h3.header__name
       = "#{current_user.name}" + " さん"
+      .bmi
+        = "BMI " + (current_user.weight.to_f  / current_user.height.to_f / current_user.height.to_f * 10000).round(1).to_s
     %ul.header__lists
       %li.list
         = link_to "食べ物追加", new_food_path, class: 'btn'
       %li.list
         = link_to "トップに戻る", root_path, class: 'btn'
+      %li.list
+        = link_to "アカウント編集", edit_user_path(current_user), class: 'btn'

@@ -34,9 +34,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       # t.datetime :locked_at
       t.integer :gender, null: false
       t.integer :age, null: false
-      t.integer :height, null: false
-      t.integer :weight, null: false
-      t.integer :bmi
+      t.float :height, null: false
+      t.float :weight, null: false
+      t.float :bmi
       t.integer :activity, null: false
       t.integer :intake_calorie
 

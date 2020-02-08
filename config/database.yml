@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: dietary-management_production
-  username: dietary-management
-  password: <%= ENV['DIETARY-MANAGEMENT_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock

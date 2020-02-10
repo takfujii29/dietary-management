@@ -35,7 +35,7 @@
       .food-form__field--left
         = f.label :dietary_fiber, "食物繊維(g)", class: 'food-form__label' 
       .food-form__field--right
-        = f.number_field :dietary_fiber, step: "0.1", class: 'food_dietary_fiber food-form__input', placeholder: "  食物繊維  (半角数字) を入力してください", required: "", min: "0", max: "1000"
+        = f.number_field :dietary_fiber, step: "0.1", class: 'food_dietary_fiber food-form__input', placeholder: "  食物繊維  (半角数字) を入力してください", min: "0", max: "1000", -#required: ""
       .food-form__field.clearfix
         .food-form__field--left
         .food-form__field--right

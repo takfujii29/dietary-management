@@ -70,6 +70,8 @@ span {
     &__tops {
       display: flex;
       justify-content: space-between;
+      width: 95%;
+      margin: 0 auto;
       &__left {
         width: 40%;
       }
@@ -82,12 +84,17 @@ span {
       justify-content: space-between;
       border-bottom: solid 2px aqua;
       margin: 5px;
-    }
-    &__top-title {
-    }
-    &__top-data {
       font-size: 20px;
       font-weight: 700;
+      .low {
+        color: red;
+      }
+      .proper {
+        color: blue;
+      }
+      .over {
+        color:red;
+      }
     }
   }
 }

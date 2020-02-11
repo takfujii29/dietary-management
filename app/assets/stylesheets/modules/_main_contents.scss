@@ -67,21 +67,35 @@ span {
         margin: 2px auto;
       }
     }
+    &__tops {
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      margin: 0 auto;
+      &__left {
+        width: 40%;
+      }
+      &__right {
+        width: 40%;
+      }
+    }
     &__top {
       display: flex;
       justify-content: space-between;
-      width: 40%;
       border-bottom: solid 2px aqua;
       margin: 5px;
-    }
-    &__top-title {
-    }
-    &__top-data {
       font-size: 20px;
       font-weight: 700;
+      .low {
+        color: red;
+      }
+      .proper {
+        color: blue;
+      }
+      .over {
+        color:red;
+      }
     }
-    
-
   }
 }
 

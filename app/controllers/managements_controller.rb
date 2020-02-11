@@ -2,7 +2,9 @@ class ManagementsController < ApplicationController
   before_action :set_management, only: [:show, :edit, :update, :destroy]
 
   def index
+    # binding.pry
     @managements = Management.where(user_id: current_user.id)
+    @today_managements = Management.where(day: Date.today).where(user_id: current_user.id)
   end
 
   def show

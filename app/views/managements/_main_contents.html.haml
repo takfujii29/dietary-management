@@ -205,38 +205,38 @@
     -#       .management__main-contents__top-data
     -#         = current_user.weight.to_s + " kg"
 
-    -# .management__main-contents__list
-    -#   %h1 記録表
-    -#   = link_to '新規登録', new_management_path, class: "new_register"
-    -#   %br
-    -#   %table{ border: "1"}
-    -#     %thead
-    -#       %tr
-    -#         %th 表題
-    -#         %th 日付
-    -#         %th 食べた物
-    -#         %th カロリー
-    -#         %th 糖質
-    -#         %th タンパク質
-    -#         %th 脂質
-    -#         %th 食塩相当量
-    -#         %th 食物繊維
-    -#         %th{colspan: "2"}
+    .management__main-contents__list
+      %h1 記録表
+      = link_to '新規登録', new_management_path, class: "new_register"
+      %br
+      %table{ border: "1"}
+        %thead
+          %tr
+            %th 表題
+            %th 日付
+            %th 食べた物
+            %th カロリー
+            %th 糖質
+            %th タンパク質
+            %th 脂質
+            %th 食塩相当量
+            %th 食物繊維
+            %th{colspan: "2"}
 
-    -#     %tbody
-    -#       - @managements.each do |management|
-    -#         %tr
-    -#           %td= management.title
-    -#           %td= management.day
-    -#           - management.foods.each do |food|
-    -#             %td= food.name
-    -#             %td= food.calorie.to_s + ' (kcal)'
-    -#             %td= food.carbohydrate.to_s + ' (g)'
-    -#             %td= food.protein.to_s + ' (g)'
-    -#             %td= food.fat.to_s + ' (g)'
-    -#             %td= food.salt_equivalent.to_s + ' (g)'
-    -#             %td= food.dietary_fiber.to_s + ' (g)'
-    -#           %td
-    -#             = link_to '編集', edit_management_path(management), class: 't-btn'
-    -#             = link_to '削除', management, method: :delete, data: { confirm: '削除しますか?' }, class: 't-btn'
+        %tbody
+          - @managements.each do |management|
+            %tr
+              %td= management.title
+              %td= management.day
+              - management.foods.each do |food|
+                %td= food.name
+                %td= food.calorie.to_s + ' (kcal)'
+                %td= food.carbohydrate.to_s + ' (g)'
+                %td= food.protein.to_s + ' (g)'
+                %td= food.fat.to_s + ' (g)'
+                %td= food.salt_equivalent.to_s + ' (g)'
+                %td= food.dietary_fiber.to_s + ' (g)'
+              %td
+                = link_to '編集', edit_management_path(management), class: 't-btn'
+                = link_to '削除', management, method: :delete, data: { confirm: '削除しますか?' }, class: 't-btn'
  

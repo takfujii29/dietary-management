@@ -111,21 +111,21 @@
             %h1 適正体重
           .management__main-contents__top-data
             = (current_user.height.to_f * current_user.height.to_f / 10000 *22).round(1).to_s + " kg"
-    -#   .management__main-contents__tops__right
-    -#     - total_calorie = 0
-    -#     - total_carbohydrate = 0
-    -#     - total_protein = 0
-    -#     - total_fat = 0
-    -#     - total_salt_equivalent = 0
-    -#     - total_dietary_fiber = 0
-    -#     - @today_managements.each do |today|
-    -#       - today.foods.each do |food|
-    -#         - total_calorie += food.calorie
-    -#         - total_carbohydrate += food.carbohydrate
-    -#         - total_protein += food.protein
-    -#         - total_fat += food.fat
-    -#         - total_salt_equivalent += food.salt_equivalent
-    -#         - total_dietary_fiber += food.dietary_fiber
+      .management__main-contents__tops__right
+        - total_calorie = 0
+        - total_carbohydrate = 0
+        - total_protein = 0
+        - total_fat = 0
+        - total_salt_equivalent = 0
+        - total_dietary_fiber = 0
+        - @today_managements.each do |today|
+          - today.foods.each do |food|
+            - total_calorie += food.calorie
+            - total_carbohydrate += food.carbohydrate
+            - total_protein += food.protein
+            - total_fat += food.fat
+            - total_salt_equivalent += food.salt_equivalent
+            - total_dietary_fiber += food.dietary_fiber
     -#     .management__main-contents__top
     -#       .management__main-contents__top-judge
     -#         - if total_calorie < target_calorie.round

@@ -1,6 +1,8 @@
 class ManagementsController < ApplicationController
   before_action :set_management, only: [:show, :edit, :update, :destroy]
 
+  require 'date'
+
   def index
     # binding.pry
     @managements = Management.where(user_id: current_user.id)

@@ -1,8 +1,8 @@
 .side_bar {
-  background-color: lightsalmon;
   max-width: 300px;
   min-width: 200px;
   width: 20vw;
+  border-right: solid 1px tomato;
   &__title {
     padding: 8px;
     border-bottom: 1px solid tomato;

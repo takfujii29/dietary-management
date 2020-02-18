@@ -53,7 +53,7 @@ class ManagementsController < ApplicationController
     end
 
     def total
-      @today_managements = Management.where(day: Date.current).where(user_id: current_user.id)
+      @today_managements = Management.where(user_id: current_user.id)
       @total_calorie = 0
       @total_carbohydrate = 0
       @total_protein = 0

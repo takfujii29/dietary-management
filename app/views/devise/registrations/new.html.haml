@@ -36,27 +36,27 @@
               .field-label
                 = f.label :性別
               .field-input
-                = f.collection_select :gender, Gender.all, :id, :name, prompt: "---", required: ""
+                = f.collection_select :gender, Gender.all, :id, :name, prompt: "---"
             .field
               .field-label
                 = f.label :年齢（歳）
               .field-input
-                = f.number_field :age, required: "", placeholder: " 年齢 (半角数字) を入力してください", min: "0", max: "120"
+                = f.number_field :age, placeholder: " 年齢 (半角数字) を入力してください", min: "0", max: "120"
             .field
               .field-label
                 = f.label :身長（cm）
               .field-input
-                = f.number_field :height, step: "0.1",required: "", placeholder: " 身長 (半角数字) を入力してください", min: "50", max: "250"
+                = f.number_field :height, step: "0.1", placeholder: " 身長 (半角数字) を入力してください", min: "50", max: "250"
             .field
               .field-label
                 = f.label :体重（kg）
               .field-input
-                = f.number_field :weight, step: "0.1", required: "" , placeholder: " 体重 (半角数字) を入力してください", min: "3", max: "500"
+                = f.number_field :weight, step: "0.1", placeholder: " 体重 (半角数字) を入力してください", min: "3", max: "500"
             .field
               .field-label
                 = f.label :身体活動レベル
               .field-input
-                = f.collection_select :activity, Activity.all, :id, :name, prompt: "---", required: ""
+                = f.collection_select :activity, Activity.all, :id, :name, prompt: "---"
             .actions
               = f.submit "新規登録", class: 'btn'
               = render "devise/shared/links"

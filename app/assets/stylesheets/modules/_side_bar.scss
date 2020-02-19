@@ -2,10 +2,10 @@
   max-width: 300px;
   min-width: 200px;
   width: 20vw;
-  border-right: solid 1px tomato;
+  border-right: solid 1px chocolate;
   &__title {
     padding: 8px;
-    border-bottom: 1px solid tomato;
+    border-bottom: 1px solid chocolate;
   }
   &__lists {
     height: calc(100vh - 120px);
@@ -17,7 +17,7 @@
   min-width: 300px;
   width: 20vw;
   height: 40px;
-  border-bottom: solid 1px tomato;
+  border-bottom: solid 1px chocolate;
   padding-left: 10px;
   line-height: 40px;
   font-size: 14px;
@@ -25,7 +25,7 @@
 }
 
 .food-list:hover {
-  background-color: tomato;
+  background-color: chocolate;
   transform: translate(10px, 0);
 }
 .food-list a{

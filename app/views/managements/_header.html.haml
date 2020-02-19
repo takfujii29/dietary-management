@@ -2,7 +2,7 @@
   %h2.header__title
     = "食事管理アプリ"
     %h3.header__name
-      = "#{current_user.name}" + " さん"
+      = current_user.name
       .bmi
         = "BMI " + (current_user.weight.to_f  / current_user.height.to_f / current_user.height.to_f * 10000).round(1).to_s
     %ul.header__lists

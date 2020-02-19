@@ -24,8 +24,8 @@
             %td= @food.dietary_fiber.to_s + ' (g)'
     %ul.more_list
       %li
-        = link_to '編集', edit_food_path(@food.id)
+        = link_to '編集', edit_food_path(@food.id), class: "btn"
       %li
-        = link_to '削除', "/foods/#{@food.id}", method: :delete
+        = link_to '削除', "/foods/#{@food.id}", method: :delete, class: "btn"
       %li
-        = link_to '戻る', root_path
+        = link_to '戻る', root_path, class: "btn"

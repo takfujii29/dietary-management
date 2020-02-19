@@ -21,8 +21,11 @@ height: 100vh;
 h3 {
   font-size: 30px;
 }
+p {
+  font-size: 16px;
+}
 span {
-  color: tomato;
+  color: chocolate;
 }
 
 .management {
@@ -44,15 +47,6 @@ span {
         font-size: 20px;
         min-width: 130px;
       }
-      .new_register {
-        border-radius: 5px;
-        display: block;
-        background-color: chocolate;
-        text-align: center;
-        height: 30px;
-        width: 80px;
-        line-height: 30px;
-      }
       .t-btn{
         border-radius: 5px;
         display: block;
@@ -62,6 +56,11 @@ span {
         width: 80px;
         line-height: 30px;
         margin: 2px auto;
+      }
+      .t-btn:hover{
+        color: chocolate;
+        background-color: white;
+        border: chocolate 1px solid;
       }
     }
     &__tops {
@@ -78,11 +77,22 @@ span {
         min-width: 500px;
       }
     }
+    &__top-title {
+      display: flex;
+    }
+    &__top-data {
+      font-size: 25px;
+    }
+    .fas {
+      padding: 10px 10px 0;
+      font-size: 1.5rem;
+      color: gray;
+    }
     &__top {
       display: flex;
       justify-content: space-between;
       border-bottom: solid 2px aqua;
-      margin: 5px;
+      padding: 5px;
       font-size: 20px;
       font-weight: 700;
       .low {

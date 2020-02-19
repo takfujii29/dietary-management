@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: monospace;
 }
 a {
   text-decoration: none;
@@ -11,12 +12,19 @@ a {
 
 .btn{
   color:white;
+  font-size: 17px;
   border-radius: 5px;
-  border: none;
+  border: chocolate 1px solid;
   display: block;
   background-color: chocolate;
   text-align: center;
   margin: 15px 5px 0;
   padding: 3px;
   width: 150px;
+}
+
+.btn:hover {
+  background-color: white;
+  color: chocolate;
+  border: chocolate 1px solid;
 }

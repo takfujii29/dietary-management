@@ -2,6 +2,10 @@
   .account-page__login.clearfix
     .account-page__header
       %h2 ログイン
+      = form_for(:user, url: user_session_path) do |f|
+        = f.hidden_field :email, value: 'test@gmail.com'
+        = f.hidden_field :password, value: '12345678'
+        = f.submit 'テストログイン', class: 'btn'
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field
           .field-label

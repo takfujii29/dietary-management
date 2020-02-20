@@ -5,23 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+## name
 
-* System dependencies
+dietary-management
 
-* Configuration
+## PlanningBackground
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+自身の栄養摂取状況を簡易的に可視化することで、生活習慣病の予防に努める。日々の積み重ねにより病気による出費や時間の浪費を減らすことを目的とする。
 
 ## usersテーブル
 

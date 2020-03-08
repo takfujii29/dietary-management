@@ -118,92 +118,94 @@
             =icon("fas", "weight")
           .management__main-contents__top-data
             = (current_user.height.to_f * current_user.height.to_f / 10000 *22).round(1).to_s + " kg"
-      -# .management__main-contents__tops__right
-      -#   .management__main-contents__top
-      -#     .management__main-contents__top-judge
-      -#       - if @total_calorie < target_calorie.round
-      -#         .low 不足
-      -#       - elsif @total_calorie == target_calorie.round
-      -#         .proper 適度
-      -#       -else @total_calorie > target_calorie.round
-      -#         .over 過剰
-      -#     .management__main-contents__top-title
-      -#       %h1 今日の摂取 エネルギー量
-      -#       =icon("fas", "fire")
-      -#     .management__main-contents__top-data
-      -#       = @total_calorie.round.to_s + ' kcal'
-      -#   .management__main-contents__top
-      -#     .management__main-contents__top-judge
-      -#       - if @total_carbohydrate < lower_target_carbohydrate.round
-      -#         .low 不足
-      -#       - elsif @total_carbohydrate > lower_target_carbohydrate.round && @total_carbohydrate < upper_target_carbohydrate.round
-      -#         .proper 適度
-      -#       -else @total_carbohydrate > upper_target_carbohydrate.round
-      -#         .over 過剰
-      -#     .management__main-contents__top-title
-      -#       %h1 今日の摂取 糖質
-      -#       =icon("fas", "bread-slice")
-      -#     .management__main-contents__top-data
-      -#       = @total_carbohydrate.round(1).to_s + ' g'
-      -#   .management__main-contents__top
-      -#     .management__main-contents__top-judge
-      -#       - if @total_protein < lower_target_protein.round
-      -#         .low 不足
-      -#       - elsif @total_protein > lower_target_protein.round && @total_protein < upper_target_protein.round
-      -#         .proper 適度
-      -#       -else @total_protein > upper_target_protein.round
-      -#         .over 過剰
-      -#     .management__main-contents__top-title
-      -#       %h1 今日の摂取 タンパク質
-      -#       =icon("fas", "fish")
-      -#     .management__main-contents__top-data
-      -#       = @total_protein.round(1).to_s + ' g'
-      -#   .management__main-contents__top
-      -#     .management__main-contents__top-judge
-      -#       - if @total_fat < lower_target_fat.round
-      -#         .low 不足
-      -#       - elsif @total_fat > lower_target_fat.round && @total_fat < upper_target_fat.round
-      -#         .proper 適度
-      -#       -else @total_fat > upper_target_fat.round
-      -#         .over 過剰
-      -#     .management__main-contents__top-title
-      -#       %h1 今日の摂取 脂質
-      -#       =icon("fas", "bacon")
-      -#     .management__main-contents__top-data
-      -#       = @total_fat.round(1).to_s + ' g'
-      -#   .management__main-contents__top
-      -#     .management__main-contents__top-judge
-      -#       - if @total_dietary_fiber < 20
-      -#         .low 不足
-      -#       - elsif @total_dietary_fiber == 20
-      -#         .proper 適度
-      -#       -else @total_dietary_fiber > 20
-      -#         .over 過剰
-      -#     .management__main-contents__top-title
-      -#       %h1 今日の摂取 食物繊維
-      -#       =icon("fas", "seedling")
-      -#     .management__main-contents__top-data
-      -#       = @total_dietary_fiber.round(1).to_s + ' g'
-      -#   .management__main-contents__top
-      -#     .management__main-contents__top-judge
-      -#       - if @total_salt_equivalent < 8
-      -#         .low 不足
-      -#       - elsif @total_salt_equivalent == 8
-      -#         .proper 適度
-      -#       -else @total_salt_equivalent > 8
-      -#         .over 過剰
-      -#     .management__main-contents__top-title
-      -#       %h1 今日の摂取 食塩相当量
-      -#       =icon("fas", "glass-whiskey")
-      -#     .management__main-contents__top-data
-      -#       = @total_salt_equivalent.round(1).to_s + ' g'
-      -#   .management__main-contents__top
-      -#     .management__main-contents__top-judge
-      -#     .management__main-contents__top-title
-      -#       %h1 現体重
-      -#       =icon("fas", "weight")
-      -#     .management__main-contents__top-data
-      -#       = current_user.weight.to_s + " kg"
+            
+      .management__main-contents__tops__right
+        .management__main-contents__top
+          .management__main-contents__top-judge
+            - if @total_calorie < target_calorie.round
+              .low 不足
+            - elsif @total_calorie == target_calorie.round
+              .proper 適度
+            -else @total_calorie > target_calorie.round
+              .over 過剰
+          .management__main-contents__top-title
+            %h1 今日の摂取 エネルギー量
+            =icon("fas", "fire")
+          .management__main-contents__top-data
+            = @total_calorie.round.to_s + ' kcal'
+        .management__main-contents__top
+          .management__main-contents__top-judge
+            - if @total_carbohydrate < lower_target_carbohydrate.round
+              .low 不足
+            - elsif @total_carbohydrate > lower_target_carbohydrate.round && @total_carbohydrate < upper_target_carbohydrate.round
+              .proper 適度
+            -else @total_carbohydrate > upper_target_carbohydrate.round
+              .over 過剰
+          .management__main-contents__top-title
+            %h1 今日の摂取 糖質
+            =icon("fas", "bread-slice")
+          .management__main-contents__top-data
+            = @total_carbohydrate.round(1).to_s + ' g'
+        .management__main-contents__top
+          .management__main-contents__top-judge
+            - if @total_protein < lower_target_protein.round
+              .low 不足
+            - elsif @total_protein > lower_target_protein.round && @total_protein < upper_target_protein.round
+              .proper 適度
+            -else @total_protein > upper_target_protein.round
+              .over 過剰
+          .management__main-contents__top-title
+            %h1 今日の摂取 タンパク質
+            =icon("fas", "fish")
+          .management__main-contents__top-data
+            = @total_protein.round(1).to_s + ' g'
+        .management__main-contents__top
+          .management__main-contents__top-judge
+            - if @total_fat < lower_target_fat.round
+              .low 不足
+            - elsif @total_fat > lower_target_fat.round && @total_fat < upper_target_fat.round
+              .proper 適度
+            -else @total_fat > upper_target_fat.round
+              .over 過剰
+          .management__main-contents__top-title
+            %h1 今日の摂取 脂質
+            =icon("fas", "bacon")
+          .management__main-contents__top-data
+            = @total_fat.round(1).to_s + ' g'
+        .management__main-contents__top
+          .management__main-contents__top-judge
+            - if @total_dietary_fiber < 20
+              .low 不足
+            - elsif @total_dietary_fiber == 20
+              .proper 適度
+            -else @total_dietary_fiber > 20
+              .over 過剰
+          .management__main-contents__top-title
+            %h1 今日の摂取 食物繊維
+            =icon("fas", "seedling")
+          .management__main-contents__top-data
+            = @total_dietary_fiber.round(1).to_s + ' g'
+        .management__main-contents__top
+          .management__main-contents__top-judge
+            - if @total_salt_equivalent < 8
+              .low 不足
+            - elsif @total_salt_equivalent == 8
+              .proper 適度
+            -else @total_salt_equivalent > 8
+              .over 過剰
+          .management__main-contents__top-title
+            %h1 今日の摂取 食塩相当量
+            =icon("fas", "glass-whiskey")
+          .management__main-contents__top-data
+            = @total_salt_equivalent.round(1).to_s + ' g'
+        .management__main-contents__top
+          .management__main-contents__top-judge
+          .management__main-contents__top-title
+            %h1 現体重
+            =icon("fas", "weight")
+          .management__main-contents__top-data
+            = current_user.weight.to_s + " kg"
+
 
     .management__main-contents__list
       %h1 記録表

@@ -6,7 +6,7 @@ class ManagementsController < ApplicationController
 
   def index
     # binding.pry
-    @managements = Management.where(user_id: current_user.id)
+    @managements = Management.where(user_id: current_user.id).includes(:foods)
   end
 
   def show
@@ -52,25 +52,25 @@ class ManagementsController < ApplicationController
       @management = Management.find(params[:id])
     end
 
-    # def total
-    #   @today_managements = Management.where(day: Date.current).where(user_id: current_user.id)
-    #   @total_calorie = 0
-    #   @total_carbohydrate = 0
-    #   @total_protein = 0
-    #   @total_fat = 0
-    #   @total_salt_equivalent = 0
-    #   @total_dietary_fiber = 0
-    #   @today_managements.each do |today|
-    #     today.foods.each do |food|
-    #       @total_calorie += food.calorie
-    #       @total_carbohydrate += food.carbohydrate
-    #       @total_protein += food.protein
-    #       @total_fat += food.fat
-    #       @total_salt_equivalent += food.salt_equivalent
-    #       @total_dietary_fiber += food.dietary_fiber
-    #     end
-    #   end
-    # end
+    def total
+      @today_managements = Management.where(day: Date.current).where(user_id: current_user.id).includes(:foods)
+      @total_calorie = 0
+      @total_carbohydrate = 0
+      @total_protein = 0
+      @total_fat = 0
+      @total_salt_equivalent = 0
+      @total_dietary_fiber = 0
+      @today_managements.each do |today|
+        today.foods.each do |food|
+          @total_calorie += food.calorie
+          @total_carbohydrate += food.carbohydrate
+          @total_protein += food.protein
+          @total_fat += food.fat
+          @total_salt_equivalent += food.salt_equivalent
+          @total_dietary_fiber += food.dietary_fiber
+        end
+      end
+    end
 
     def management_params
       params.require(:management).permit(:title, :day, food_ids: []).merge(user_id: current_user.id)

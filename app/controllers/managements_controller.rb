@@ -1,6 +1,6 @@
 class ManagementsController < ApplicationController
   before_action :set_management, only: [:show, :edit, :update, :destroy]
-  before_action :total, only: [:index]
+  # before_action :total, only: [:index]
 
   require 'date'
 

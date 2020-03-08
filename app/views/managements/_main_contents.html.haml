@@ -5,6 +5,7 @@
         .management__main-contents__top
           .management__main-contents__top-title
             %h1 一日の目安 エネルギー量
+            =icon("fas", "fire")
           .management__main-contents__top-data
             - if current_user.activity == 1 && current_user.gender == 1
               - target_calorie = (14.1 * current_user.weight + 620 * 1.5)
@@ -24,6 +25,7 @@
         .management__main-contents__top
           .management__main-contents__top-title
             %h1 一日の目安 糖質
+            =icon("fas", "bread-slice")
           .management__main-contents__top-data
             - if current_user.activity == 1 && current_user.gender == 1
               - lower_target_carbohydrate = ((14.1 * current_user.weight + 620 * 1.5) / 4 * 0.5)
@@ -49,6 +51,7 @@
         .management__main-contents__top
           .management__main-contents__top-title
             %h1 一日の目安 タンパク質
+            =icon("fas", "fish")
           .management__main-contents__top-data
             - if current_user.activity == 1 && current_user.gender == 1
               - lower_target_protein = ((14.1 * current_user.weight + 620 * 1.5) / 4 * 0.13)
@@ -74,6 +77,7 @@
         .management__main-contents__top
           .management__main-contents__top-title
             %h1 一日の目安 脂質
+            =icon("fas", "bacon")
           .management__main-contents__top-data
             - if current_user.activity == 1 && current_user.gender == 1
               - lower_target_fat = ((14.1 * current_user.weight + 620 * 1.5) / 9 * 0.2)
@@ -99,18 +103,22 @@
         .management__main-contents__top
           .management__main-contents__top-title
             %h1 一日の目安 食物繊維
+            =icon("fas", "seedling")
           .management__main-contents__top-data
-            %p 20 g 以上
+            %h1 20 g 以上
         .management__main-contents__top
           .management__main-contents__top-title
             %h1 一日の目安 食塩相当量
+            =icon("fas", "glass-whiskey")
           .management__main-contents__top-data
-            %p 8 g 未満
+            %h1 8 g 未満
         .management__main-contents__top
           .management__main-contents__top-title
             %h1 適正体重
+            =icon("fas", "weight")
           .management__main-contents__top-data
             = (current_user.height.to_f * current_user.height.to_f / 10000 *22).round(1).to_s + " kg"
+            
       .management__main-contents__tops__right
         .management__main-contents__top
           .management__main-contents__top-judge
@@ -198,9 +206,10 @@
           .management__main-contents__top-data
             = current_user.weight.to_s + " kg"
 
+
     .management__main-contents__list
       %h1 記録表
-      = link_to '新規登録', new_management_path, class: "new_register"
+      = link_to '新規登録', new_management_path, class: "btn"
       %br
       %table{ border: "1"}
         %thead

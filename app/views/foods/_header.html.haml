@@ -2,7 +2,7 @@
   %h2.header__title
     = "食事管理アプリ"
     %h3.header__name
-      = "#{current_user.name}" + " さん"
+      = current_user.name
     %ul.header__lists
       %li.list
         = link_to "食べ物追加", new_food_path, class: 'btn'

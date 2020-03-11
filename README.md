@@ -5,13 +5,19 @@ application up and running.
 
 Things you may want to cover:
 
-## name
+## タイトル
 
 dietary-management
 
-## PlanningBackground
+## 企画背景
 
 自身の栄養摂取状況を簡易的に可視化することで、生活習慣病の予防に努める。日々の積み重ねにより病気による出費や時間の浪費を減らすことを目的とする。
+
+## 開発環境
+
+rails 5.0
+HTML5
+CSS3
 
 ## usersテーブル
 

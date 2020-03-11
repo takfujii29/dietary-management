@@ -118,6 +118,7 @@
             =icon("fas", "weight")
           .management__main-contents__top-data
             = (current_user.height.to_f * current_user.height.to_f / 10000 *22).round(1).to_s + " kg"
+
       .management__main-contents__tops__right
         .management__main-contents__top
           -if @total_calorie.present?

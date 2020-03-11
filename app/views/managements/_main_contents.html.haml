@@ -118,7 +118,6 @@
             =icon("fas", "weight")
           .management__main-contents__top-data
             = (current_user.height.to_f * current_user.height.to_f / 10000 *22).round(1).to_s + " kg"
-
       -# .management__main-contents__tops__right
       -#   .management__main-contents__top
       -#     .management__main-contents__top-title
@@ -211,7 +210,6 @@
       -#     .management__main-contents__top-judge
       -#     .management__main-contents__top-data
       -#       = current_user.weight.to_s + " kg"
-
     .management__main-contents__list
       %h1 記録表
       = link_to '新規登録', new_management_path, class: "btn"

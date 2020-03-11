@@ -204,14 +204,14 @@
                 .over 過剰
             .management__main-contents__top-data
               = @total_salt_equivalent.round(1).to_s + ' g'
-        .management__main-contents__top
-          .management__main-contents__top-title
-            %h1 現体重
-            =icon("fas", "weight")
-          .management__main-contents__top-judge
+        -# .management__main-contents__top
+        -#   .management__main-contents__top-title
+        -#     %h1 現体重
+        -#     =icon("fas", "weight")
+        -#   .management__main-contents__top-judge
 
-          .management__main-contents__top-data
-            = current_user.weight.to_s + " kg"
+        -#   .management__main-contents__top-data
+        -#     = current_user.weight.to_s + " kg"
 
     .management__main-contents__list
       %h1 記録表

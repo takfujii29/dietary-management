@@ -5,8 +5,7 @@ class ManagementsController < ApplicationController
   require 'date'
 
   def index
-    # binding.pry
-    @managements = Management.where(user_id: current_user.id).includes(:foods)
+    @managements = Management.where(user_id: current_user.id)
   end
 
   def show
